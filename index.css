@@ -1,0 +1,27 @@
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Layout from '@/components/Layout';
+import Home from '@/pages/Home';
+import POSDemo from '@/pages/POSDemo';
+import Algorithm from '@/pages/Algorithm';
+import HashMapBuilder from '@/pages/HashMapBuilder';
+import Visualizer from '@/pages/Visualizer';
+import Complexity from '@/pages/Complexity';
+
+function App() {
+  return (
+    <HashRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pos" element={<POSDemo />} />
+          <Route path="/algorithm" element={<Algorithm />} />
+          <Route path="/hashmap" element={<HashMapBuilder />} />
+          <Route path="/visualizer" element={<Visualizer />} />
+          <Route path="/complexity" element={<Complexity />} />
+        </Routes>
+      </Layout>
+    </HashRouter>
+  );
+}
+
+export default App;
